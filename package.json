@@ -2,6 +2,8 @@
   "name": "react-with-serverless",
   "private": true,
   "version": "0.0.0",
+  "author": "Mr_ozin",
+  "license": "MIT",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
