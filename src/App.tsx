@@ -14,8 +14,11 @@ function usePrefectures() {
   useEffect(() => {
     fetchApi()
       .then((data) => {
-        setPrefectures(data.result)
-        setLoading(false)
+        if (data.result) {
+          setPrefectures(data.result)
+          setLoading(false)
+        }
+        throw new Error('error')
       })
       .catch((err) => {
         setLoading(false)
@@ -25,7 +28,7 @@ function usePrefectures() {
   return {
     prefectures,
     isLoading: loading,
-    isError: loading && prefectures.length === 0,
+    isError: !loading && prefectures.length === 0,
   }
 }
 

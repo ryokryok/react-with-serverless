@@ -2,7 +2,7 @@ export type ApiResponse = {
   statusCode?: string
   message: string | null
   description?: string
-  result: Prefectures[]
+  result?: Prefectures[]
 }
 
 export type Prefectures = {
